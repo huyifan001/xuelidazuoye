@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>游北京</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style-type: none;
+		}
+		.clear:after{
+			content: '';
+			display: block;
+			height: 0;
+			clear: both;
+		}
+		.header{
+			height: 101px;
+		}
+		.container{
+			width: 1200px;
+			height: 101px;
+			margin: 0 auto;
+		}
+		.one{
+			margin-top: 33px;
+			float: left;
+            font-size:40px;
+            font-family:Microsoft YaHei;
+            font-weight:bold;
+            color:rgba(0,164,255,1);
+		}
+		.nav li{
+            width: 80px;
+            height: 10px;
+			float: left;
+			padding-top: 42px;
+		}
+		.nav a{
+			padding-bottom: 10px;
+            font-size:18px;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:rgba(5,5,5,1);
+		}
+		.nav a:hover{
+			text-align: center;
+			height: 10px;
+			border-bottom: 2px solid rgba(0,164,255,1);
+		}
+		.first{
+			padding-left: 50px;
+		}
+		.first .on{
+			border-bottom: 2px solid rgba(0,164,255,1);
+		}
+		.last{
+			padding-left: 40px;
+		}
+        .form{
+        	float: right;
+        }
+        .two{
+        	margin-top: 44px;
+        	margin-left: 10px;
+        	float: right;
+        	font-size:14px;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+        }
+        .search{
+        	margin-top: 31px;
+        	float: left;
+        	width: 250px;
+        	height: 10px;
+        	padding: 14px;
+        	border: 1px solid rgba(0,164,255,1);
+
+        }
+        .submit{
+        	margin-top: 31px;
+        	float: left;
+        	width: 50px;
+        	height: 40px;
+        	border: 2px solid rgba(0,164,255,1);
+        	background:rgba(0,164,255,1) url('img/search.png') no-repeat center center;
+        }
+        .banner{
+        	position: relative;
+        	height: 420px;
+        	width: 100%;
+        	background-color: rgba(28,3,108,1);
+        }
+        .banner li{
+        	height: 420px;
+        }
+        .banner-one{
+        	background: url('img/banner1.jpg')no-repeat center center;
+        }
+        .prev,.next {
+            position: absolute;
+            top: 160px;
+            left: 6%;
+            width: 106px;
+            height: 106px;
+            opacity: 0.4;
+        }
+
+        .next {
+            left: auto;
+            right: 5%;
+        }
+        .center{
+        	width: 1200px;
+        	height: 19px;
+        	margin: 0 auto;
+        	padding-top: 37px;
+        	padding-bottom: 21px;
+        }
+        .center-pone{
+        	float: left;
+        	font-size:20px;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:rgba(73,73,73,1);
+        }
+        .center-ptwo{
+        	font-size:12px;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:rgba(165,165,165,1);
+            padding-right: 50px;
+            float: right;
+        }
+        .ad{
+        	width: 1200px;
+        	height: 520px;
+        	margin: 0 auto;
+        }
+        .ad-cotainer li{
+        	float: left;
+        	height: 400px;
+        	padding-right: 2px;
+        }
+        .ad-bottom{
+        	width: 1200px;
+        	height: 115px;
+        	margin: 0 auto;
+        }
+        .ad-bottom li{
+        	height: 115px;
+        	width: 398px;
+        	float: left;
+        	background:rgba(255,255,255,1);
+            box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+            padding-right: 2px;
+        }
+        .b-one{
+        	width: 401px;
+        	height: 34px;
+        	padding-top: 24px;
+        	padding-left: 23px;
+        	font-size:25px;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:rgba(0,164,255,1);
+            line-height:20px;
+        }
+        .ad-bottom a{
+        	display: inline-block;
+        	text-align: center;
+        	padding-top: 50px;
+        	padding-left: 0px;
+        }
+        .ad-bottom2 a{
+        	display: inline-block;
+        }
+        .ad-bottom2{
+        	width: 1200px;
+        	height: 125px;
+        	margin: 0 auto;
+        }
+        .ad-bottom2 li{
+        	height: 125px;
+        	width: 398px;
+        	float: left;
+        	background:rgba(255,255,255,1);
+            box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+            padding-right: 2px;
+        }
+        .footer{
+        	background-color: rgba(0,0,0,0.4);
+        }
+        .footerone{
+        	width: 1200px;
+        	margin: 0 auto;
+        }
+        .footer p{
+        	font-size:22px;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color: pink;
+        }
+        .thelast{
+			height: 120px;
+			background-color:#000;
+			color: #fff; 
+			text-align: center;
+			line-height: 120px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<p class="one">游北京</p>
+			<ul class="nav">
+				<li class="first"><a href="#" class="on">首页</a></li>
+				<li><a href="#">景点</a></li>
+				<li><a href="#">住宿</a></li>
+				<li><a href="#">美食</a></li>
+			    <li><a href="#">购物</a></li>
+				<li><a href="#">路线规划</a></li>
+				<li class="last"><a href="#">游记</a></li>
+			</ul>
+			<form class="form clear">
+				<input type="text" placeholder="输入景点名称" class="search"/>
+			    <input type="button" class="submit"/>
+			    <p class="two">个人中心</p>
+			</form>
+		</div>
+	</div>
+	<div class="banner">
+		<ul>
+			<li class="banner-one"></li>
+		</ul>
+		<img src="img/prev.png" alt="上一页" class="prev" />
+        <img src="img/next.png" alt="下一页" class="next" />
+	</div>
+	<div class="center clear">
+		<p class="center-pone">必游景点</p>
+		<a href="#" class="center-ptwo">查看全部</a>
+	</div>
+	<div class="ad">
+		<div class="ad-cotainer clear">
+			<ul>
+				<li><img src="img/1gugong.jpg"></li>
+				<li><img src="img/2yiheyuan.jpg"></li>
+				<li><img src="img/3changcheng.jpg"></li>
+			</ul>
+		</div>
+		<div class="ad-bottom clear">
+			<ul>
+				<li><a href="#" class="b-one">故宫博物馆</a></li>
+				<li><a href="#" class="b-one">颐和园</a></li>
+				<li><a href="#" class="b-one">八达岭长城</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad">
+		<div class="ad-cotainer clear">
+			<ul>
+				<li><img src="img/4tiantan.jpg"></li>
+				<li><img src="img/5yuanmingyuan.jpg"></li>
+				<li><img src="img/6beihaigongyuan.jpg"></li>
+			</ul>
+		</div>
+		<div class="ad-bottom clear">
+			<ul>
+				<li><a href="#" class="b-one">天安门</a></li>
+				<li><a href="#" class="b-one">圆明园</a></li>
+				<li><a href="#" class="b-one">北海公园</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="center clear">
+		<p class="center-pone">美食&餐厅</p>
+		<a href="#" class="center-ptwo">查看全部</a>
+	</div>
+	<div class="ad">
+		<div class="ad-cotainer clear">
+			<ul>
+				<li><img src="img/meishi1.jpg"></li>
+				<li><img src="img/meishi2.jpg"></li>
+				<li><img src="img/meishi3.jpg"></li>
+			</ul>
+		</div>
+		<div class="ad-bottom2 clear">
+			<ul>
+				<li class="ad-bottom2"><a href="#" class="b-two">北京烤鸭：</a><p>烤鸭是在世界上都享有盛名的北京知名菜式，只选用优质北京肉鸭，用带有天然香气的木材烤制，鸭皮色泽透润，肉质肥而不腻，外焦里嫩，令人入口难忘，口齿留香。</p></li>
+				<li class="ad-bottom2"><a href="#" class="b-two">炸咯吱：</a><p>北京传统名小吃之一，分为软炸和脆炸。将咯吱皮切成菱形块放入油锅中炸制金黄，出品吃在嘴里又酥又脆，”咯吱咯吱”作响，故得此名。</p></li>
+				<li class="ad-bottom2"><a href="#" class="b-two">驴打滚：</a><p>驴打滚是北京的一道知名小吃，主要由黄米面、黄豆面和红豆或红糖制作而成。黄米面卷着馅，再滚上黄豆面，三色的成品非常好看，口感甜香软糯，既有黄豆的香味，又有馅料的清甜，非常受欢迎。</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad">
+		<div class="ad-cotainer clear">
+			<ul>
+				<li><img src="img/canting1.jpg"></li>
+				<li><img src="img/canting2.jpg"></li>
+				<li><img src="img/canting3.jpg"></li>
+			</ul>
+		</div>
+		<div class="ad-bottom2 clear">
+			<ul>
+				<li class="ad-bottom2"><a href="#" class="b-two">大董（工体店）：</a><p>常常座无虚席的烤鸭餐厅，酥不腻烤鸭是店内的招牌，鸭皮口感独特，酥酥的鸭皮蘸了白糖，放在舌尖不嚼即化，深受食客欢迎。这里除了提供烤鸭外，每个季节都会推出创意菜肴。</p></li>
+				<li class="ad-bottom2"><a href="#" class="b-two">北京亮China Grill：</a><p>北京亮China Grill拥有极其开阔的视野，360度的玻璃幕墙可以在用餐时欣赏到繁华的城市景色。餐厅主打牛排，种类丰富，厨师注重牛排的火候、调味汁的味道，精致摆盘令人惊艳。</p></li>
+				<li class="ad-bottom2"><a href="#" class="b-two">OPERA BOMBANA：</a><p>主厨Umberto Bombana拥有白松露世界大使之称，在国际享有盛誉。该餐厅由其倾心打造，现已成为饕客圣地，建筑采用挑高结构，柔和统一的色调营造高雅惬意之感。各式餐食制作工艺精细繁复，以优美的姿态带来舌尖的愉悦。</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="center clear">
+		<p class="center-pone">必逛商场</p>
+		<a href="#" class="center-ptwo">查看全部</a>
+	</div>
+	<div class="ad">
+		<div class="ad-cotainer clear">
+			<ul>
+				<li><img src="img/biguang1.jpg"></li>
+				<li><img src="img/biguang2.jpg"></li>
+				<li><img src="img/biguang3.jpg"></li>
+			</ul>
+		</div>
+		<div class="ad-bottom clear">
+			<ul>
+				<li><a href="#" class="b-one">东安市场</a></li>
+				<li><a href="#" class="b-one">西单商场</a></li>
+				<li><a href="#" class="b-one">朝阳大悦城</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ad">
+		<div class="ad-cotainer clear">
+			<ul>
+				<li><img src="img/biguang4.jpg"></li>
+				<li><img src="img/biguang5.jpg"></li>
+				<li><img src="img/biguang6.jpg"></li>
+			</ul>
+		</div>
+		<div class="ad-bottom clear">
+			<ul>
+				<li><a href="#" class="b-one">荟聚西红门购物中心</a></li>
+				<li><a href="#" class="b-one">西单大悦城</a></li>
+				<li><a href="#" class="b-one">北京SKP</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footerone"><p>在这里只针对北京的旅游景点进行了汇总，并增加了游记功能，在这里大家可以把自己在不同景点的游行体验写下来，让更多的旅客做为参考。除此以外，在游记中大家还可以互相交流，结识同行伙伴，让你的旅行变得丰富多彩！</p></div>
+	</div>
+	<div class="thelast">
+		<p>苏ICP备000号、2014-2017版权所有</p>
+	</div>
+	
+</body>
+</html>
